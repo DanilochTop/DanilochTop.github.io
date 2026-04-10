@@ -47,19 +47,14 @@ body {
 	position: relative;	
 }
 
-.menu-section .top .menu-pages {
+.menu-section .top .mii-img {
 	position: absolute;
-	top: 10%;
-	height: 88%;
-	background-color: green;
-}
-
-.menu-section .top .menu-pages .page {
-	width: 80vw;
-	display: inline-grid;
-	grid-template-columns: repeat(auto-fit, 250px);
-	justify-content: center;
-	gap: 20px;
+	bottom: -20%;
+	left: -2%;
+	width: auto;
+	height: 125%;
+	max-width: none;
+	aspect-ratio: 1 / 1;
 }
 
 .menu-section .top .menu-pages .page .tile {
@@ -133,6 +128,11 @@ body {
 }
 
 @media (orientation: portrait) {
+	.menu-section .top .mii-img {
+		width: 100%;
+		height: auto;
+	}
+
 	.menu-section .top {
 		height: 80%;
 	}
