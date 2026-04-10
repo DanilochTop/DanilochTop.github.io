@@ -50,11 +50,15 @@ body {
 .menu-section .top .mii-img {
 	position: absolute;
 	bottom: -20%;
-	left: -2%;
-	width: auto;
-	height: 125%;
+	width: 45%;
+	height: auto;
 	max-width: none;
 	aspect-ratio: 1 / 1;
+	transition: bottom 0.5s ease;
+}
+
+.menu-section .top .mii-img:not(.loaded) {
+	bottom: -100%;
 }
 
 .menu-section .top .menu-pages .page .tile {
@@ -145,11 +149,5 @@ body {
 		width: 20%;
 		height: 62%;
 		min-width: 100px;
-	}
-}
-
-@media (max-width: 480px) {
-	.menu-section .bottom .button-bg {
-		min-width: 75px;
 	}
 }
