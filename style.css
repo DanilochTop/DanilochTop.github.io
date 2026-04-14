@@ -27,6 +27,7 @@ img {
 /* Styles */
 
 body {
+	cursor: none;
 	background-image: repeating-linear-gradient(
 		to bottom,
 		#f2f2f2,
@@ -34,6 +35,23 @@ body {
 		#e4e4e4 0.6dvh,
 		#e4e4e4 0.9dvh
 	);
+}
+
+#cursor {
+	display: none;
+	position: fixed;
+	width: 32px;
+	height: 32px;
+	background-image: url('img/cursor_sprites.png') ;
+	pointer-events: none;
+	transform: translate(-50%, -50%) scale(1.2);
+	z-index: 1000;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	#cursor {
+		display: block;
+	}
 }
 
 .menu-section {
@@ -60,6 +78,8 @@ body {
 	width: 42%;
 	height: auto;
 	max-width: none;
+	pointer-events: none;
+	user-select: none;
 	aspect-ratio: 1 / 1;
 	transition: transform 0.5s ease;
 }
