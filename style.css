@@ -32,6 +32,7 @@ img {
 
 body {
 	cursor: none;
+	user-select: none;
 	background-image: repeating-linear-gradient(
 		to bottom,
 		#f2f2f2,
@@ -90,7 +91,7 @@ body {
 }
 
 .menu-section .top .mii-img.loaded {
-	animation: miiFadeIn 1s ease forwards;
+	animation: miiFadeIn 1s ease forwards, miiFloat 5s ease-in-out infinite 1s;
 }
 
 .menu-section .top .mii-img:not(.loaded) {
@@ -103,6 +104,21 @@ body {
 	}
 	100% {
 		transform: translateY(0%);
+	}
+}
+
+@keyframes miiFloat {
+	0% {
+		transform: rotate(0);
+		transform-origin: center bottom;
+	}
+	50% {
+		transform: rotate(5deg);
+		transform-origin: center bottom;
+	}
+	100% {
+		transform: rotate(0);
+		transform-origin: center bottom;
 	}
 }
 
@@ -119,35 +135,47 @@ body {
 }
 
 .menu-section .top .text-container .text {
-	animation: titleFadeIn 1s ease forwards;
+	line-height: 1;
+	background-clip: text;
+	color: transparent;
 }
 
 .menu-section .top h1 {
 	font-size: 3.5em;
 	font-weight: 900;
-	color: #fff;
-	text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
-	-webkit-text-stroke: 4px black;
+	background: linear-gradient(180deg, #3cb1ff, #0076c5);
+	text-shadow: 0px 0px 10px rgba(60, 177, 255, 0.8);
+	opacity: 0;
+	animation: titleFadeIn 1s ease forwards;
 }
 
 .menu-section .top h2 {
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 600;
 	font-style: italic;
-	letter-spacing: 0.5px;
-	color: #fff;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-	-webkit-text-stroke: 1px black;
+	letter-spacing: -5%;
+	background: linear-gradient(180deg, #75c8ff, #5d9ac2);
+	opacity: 0;
+	animation: subtitleFadeIn 1s ease forwards 0.75s;
 }
 
 @keyframes titleFadeIn {
 	0% {
 		opacity: 0;
-		transform: translateY(50%);
+		transform: translateY(20dvh);
 	}
 	100% {
 		opacity: 1;
 		transform: translateY(0%);
+	}
+}
+
+@keyframes subtitleFadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -236,6 +264,21 @@ body {
 		}
 		100% {
 			transform: translate(-50%, 0%);
+		}
+	}
+
+	@keyframes miiFloat {
+		0% {
+			transform: translate(-50%, 0%) rotate(0);
+			transform-origin: center bottom;
+		}
+		50% {
+			transform: translate(-50%, 0%) rotate(5deg);
+			transform-origin: center bottom;
+		}
+		100% {
+			transform: translate(-50%, 0%) rotate(0);
+			transform-origin: center bottom;
 		}
 	}
 
