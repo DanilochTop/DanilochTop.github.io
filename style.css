@@ -24,6 +24,10 @@ img {
   height: auto;
 }
 
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap');
+
 /* Styles */
 
 body {
@@ -82,17 +86,69 @@ body {
 	user-select: none;
 	aspect-ratio: 1 / 1;
 	transition: transform 0.5s ease;
+	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+}
+
+.menu-section .top .mii-img.loaded {
+	animation: miiFadeIn 1s ease forwards;
 }
 
 .menu-section .top .mii-img:not(.loaded) {
 	transform: translateY(100%);
 }
 
-.menu-section .top .menu-pages .page .tile {
-	display: inline-block;
-	width: 250px;
-	aspect-ratio: 16 / 9;
-	background-color: orange;
+@keyframes miiFadeIn {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+.menu-section .top .text-container {
+	position: absolute;
+	top: 50%;
+	right: 4%;
+	transform: translate(0%, -50%);
+	width: 52%;
+	text-align: center;
+	font-size: 3vw;
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	font-weight: 900;
+}
+
+.menu-section .top .text-container .text {
+	animation: titleFadeIn 1s ease forwards;
+}
+
+.menu-section .top h1 {
+	font-size: 3.5em;
+	font-weight: 900;
+	color: #fff;
+	text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
+	-webkit-text-stroke: 4px black;
+}
+
+.menu-section .top h2 {
+	font-size: 1.5em;
+	font-weight: 600;
+	font-style: italic;
+	letter-spacing: 0.5px;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+	-webkit-text-stroke: 1px black;
+}
+
+@keyframes titleFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
 }
 
 .menu-section .bottom {
@@ -159,13 +215,36 @@ body {
 }
 
 @media (orientation: portrait) {
-	.menu-section .top .mii-img {
-		width: 100%;
-		height: auto;
-	}
-
 	.menu-section .top {
 		height: 80%;
+	}
+
+	.menu-section .top .mii-img {
+		width: auto;
+		height: 60%;
+		bottom: 10%;
+		left: 50%;
+	}
+
+	.menu-section .top .mii-img:not(.loaded) {
+		transform: translate(-50%, 100%);
+	}
+
+	@keyframes miiFadeIn {
+		0% {
+			transform: translate(-50%, 100%);
+		}
+		100% {
+			transform: translate(-50%, 0%);
+		}
+	}
+
+	.menu-section .top .text-container {
+		top: 20%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		font-size: 5vw;
 	}
 	
 	.menu-section .bottom {
