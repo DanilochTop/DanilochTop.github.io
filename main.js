@@ -101,14 +101,39 @@ document.addEventListener('mouseleave', e => {
 // Date and Time //
 
 function updateTime() {
-	const timeElement = document.querySelector('.menu-section .bottom .time');
-	const now = new Date();
-	const hours = String(now.getHours()).padStart(2, '0');
-	const minutes = String(now.getMinutes()).padStart(2, '0');
-	timeElement.textContent = `${hours}:${minutes}`;
+	let timeElement = document.querySelector('.menu-section .bottom .time');
+	let now = new Date();
+
+	let isAmPm = new Intl.DateTimeFormat(undefined, { hour: "numeric" }).resolvedOptions().hour12;
+
+	console.log(isAmPm);
+
+	let hours = String(now.getHours()).padStart(2, '0');
+	let minutes = String(now.getMinutes()).padStart(2, '0');
+
+	if (isAmPm) {
+		hours = String(hours % 12 || 12).padStart(2, '0'); // Convert to 12-hour format
+	}
+
+	timeElement.innerHTML = `${hours}:${minutes}` + '<span class="ampm">' + (isAmPm ? (now.getHours() < 12 ? 'AM' : 'PM') : '') + '</span>';
+}
+
+function updateDate() {
+	let dateElement = document.querySelector('.menu-section .bottom .date');
+	let now = new Date();
+
+	let formattedDate = now.toLocaleDateString(undefined, { weekday: 'short', month: '2-digit', day: '2-digit' })
+
+	formattedDate = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1); // Capitalize first letter of the weekday
+	formattedDate = formattedDate.replace(/[,.]/g, ''); // Remove comma/dot if present
+
+	dateElement.innerHTML = formattedDate;
 }
 
 updateTime();
-document.querySelector('.menu-section .bottom .time').style.animation = 'timeFadeIn 1s ease-in-out forwards';
+updateDate();
+
+document.querySelector('.menu-section .bottom .time').style.animation = 'dateTimeFadeIn 0.25s ease-in-out forwards';
+document.querySelector('.menu-section .bottom .date').style.animation = 'dateTimeFadeIn 0.25s ease-in-out forwards';
 
 setInterval(updateTime, 1000);

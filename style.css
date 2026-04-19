@@ -135,7 +135,7 @@ body {
 	transform: translate(0%, -50%);
 	width: 52%;
 	text-align: center;
-	font-size: 3vw;
+	font-size: 3dvw;
 	font-family: "M PLUS Rounded 1c", sans-serif;
 	font-weight: 900;
 }
@@ -230,12 +230,34 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: "Digital7", monospace;
-	font-size: 12vh;
+	font-size: 12dvh;
 	color: #9a9a9a;
 	opacity: 0;
 }
 
-@keyframes timeFadeIn {
+.menu-section .bottom .time .ampm {
+	position: absolute;
+	left: 115%;
+	bottom: 10%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.35em;
+	font-weight: 600;
+}
+
+.menu-section .bottom .date {
+	position: absolute;
+	top: 64%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8dvh;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	color: #7c7e82;
+	opacity: 0;
+}
+
+@keyframes dateTimeFadeIn {
 	0% {
 		opacity: 0;
 	}
@@ -355,7 +377,7 @@ body {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
-		font-size: 5vw;
+		font-size: 5dvw;
 	}
 	
 	.menu-section .bottom {
@@ -364,6 +386,10 @@ body {
 	
 	.menu-section .bottom .time {
 		display: none;
+	}
+
+	.menu-section .bottom .date {
+		font-size: 7dvw;
 	}
 
 	.menu-section .bottom .button-bg {
