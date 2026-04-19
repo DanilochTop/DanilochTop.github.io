@@ -311,7 +311,7 @@ body {
 .menu-section .bottom svg {
 	position: absolute;
 	bottom: 0;
-	width: 50%;
+	width: 50.1%;
 	height: 100%;
 	z-index: -1;
 }
@@ -322,6 +322,13 @@ body {
 
 .menu-section .bottom .svg.right {
 	right: 0;
+}
+
+.content-section {
+	background: repeating-linear-gradient(to bottom,
+			#dcdfe6,
+			#cbcfd7 2px);
+	font-size: 12px;
 }
 
 @media (orientation: portrait) {
