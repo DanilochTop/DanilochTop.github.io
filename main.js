@@ -210,3 +210,9 @@ document.querySelector('.menu-section .bottom .time').style.animation = 'dateTim
 document.querySelector('.menu-section .bottom .date').style.animation = 'dateTimeFadeIn 0.25s ease-in-out forwards';
 
 setInterval(updateTime, 1000);
+
+// Dev Languages Carousel //
+
+const devCarouselTrack = document.querySelector('.dev-languages-carousel .track');
+
+devCarouselTrack.innerHTML += devCarouselTrack.innerHTML; // Duplicate icons for seamless scrolling
