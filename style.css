@@ -211,11 +211,11 @@ body {
 	overflow: hidden;
 }
 
-.menu-section .top .background-channels .channel img {
+.menu-section .top .background-channels .channel canvas {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	opacity: 0.1;
+	opacity: 0.4;
 }
 
 .menu-section .bottom {

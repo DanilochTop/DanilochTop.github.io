@@ -98,6 +98,81 @@ document.addEventListener('mouseleave', e => {
 	cursor.style.display = 'none';
 });
 
+// Background Channels //
+
+const backgroundChannelsContainer = document.querySelector('.background-channels');
+
+function createChannel() {
+	let channel = document.createElement('div');
+	channel.classList.add('channel');
+	backgroundChannelsContainer.appendChild(channel);
+
+	let canvas = document.createElement('canvas');
+	channel.appendChild(canvas);
+}
+
+let channelCanvasContexts = [];
+
+function handleChannelCanvas() {
+	channelCanvasContexts = []; // Clear previous contexts in case of reinitialization
+
+	let channelCanvases = document.querySelectorAll('.channel canvas');
+
+	channelCanvases.forEach(canvas => {
+		let context = canvas.getContext('2d');
+
+		channelCanvasContexts.push({ canvas, context });
+
+		resizeChannelCanvas(canvas);
+	});
+
+	window.addEventListener('resize', () => {
+		channelCanvases.forEach(canvas => {
+			resizeChannelCanvas(canvas);
+		});
+	});
+}
+
+function resizeChannelCanvas(canvas) {
+	canvas.width = canvas.parentElement.clientWidth;
+	canvas.height = canvas.parentElement.clientHeight;
+}
+
+function channelCanvasDrawNoise(context, width, height) {
+	let imageData = context.getImageData(0, 0, width, height);
+	let buffer = new Uint32Array(imageData.data.buffer);
+
+	for (let i = 0; i < buffer.length; i++) {
+		const color = Math.random() * 255 | 0;
+		buffer[i] = (255 << 24) | (color << 16) | (color << 8) | color;
+	}
+
+	context.putImageData(imageData, 0, 0);
+}
+
+let lastRenderTimestamp = 0;
+
+function channelCanvasAnimationLoop(renderTimestamp) {
+	if (renderTimestamp - lastRenderTimestamp > 50) { // Limit to ~20 FPS
+		channelCanvasContexts.forEach(({ canvas, context }) => {
+			channelCanvasDrawNoise(context, canvas.width, canvas.height);
+		});
+
+		lastRenderTimestamp = renderTimestamp;
+	}
+
+	requestAnimationFrame(channelCanvasAnimationLoop);
+}
+
+const backgroundChannelsCount = 12;
+
+for (let i = 0; i < backgroundChannelsCount; i++) {
+	createChannel();
+}
+
+handleChannelCanvas();
+channelCanvasAnimationLoop();
+
 // Date and Time //
 
 function updateTime() {
@@ -105,8 +180,6 @@ function updateTime() {
 	let now = new Date();
 
 	let isAmPm = new Intl.DateTimeFormat(undefined, { hour: "numeric" }).resolvedOptions().hour12;
-
-	console.log(isAmPm);
 
 	let hours = String(now.getHours()).padStart(2, '0');
 	let minutes = String(now.getMinutes()).padStart(2, '0');
