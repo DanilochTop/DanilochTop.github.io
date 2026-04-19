@@ -28,6 +28,11 @@ img {
 
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap');
 
+@font-face {
+	font-family: "Digital7";
+	src: url('fonts/digital-7.ttf') format('truetype');
+}
+
 /* Styles */
 
 body {
@@ -47,7 +52,7 @@ body {
 	position: fixed;
 	width: 32px;
 	height: 32px;
-	background-image: url('img/cursor_sprites.png') ;
+	background-image: url('images/cursor_sprites.png') ;
 	pointer-events: none;
 	transform: translate(-50%, -50%) scale(1.2);
 	z-index: 1000;
@@ -88,6 +93,7 @@ body {
 	aspect-ratio: 1 / 1;
 	transition: transform 0.5s ease;
 	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+	z-index: -900;
 }
 
 .menu-section .top .mii-img.loaded {
@@ -192,7 +198,7 @@ body {
 	gap: 1%;
 	row-gap: 2%;
 	padding: 1%;
-	z-index: -1;
+	z-index: -1000;
 	filter: blur(5px);
 }
 
@@ -218,19 +224,24 @@ body {
 	position: relative;
 }
 
-.menu-section .bottom svg {
+.menu-section .bottom .time {
 	position: absolute;
-	bottom: 0;
-	width: 50%;
-	height: 100%;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Digital7", monospace;
+	font-size: 12vh;
+	color: #9a9a9a;
+	opacity: 0;
 }
 
-.menu-section .bottom .svg.left {
-	left: 0;
-}
-
-.menu-section .bottom .svg.right {
-	right: 0;
+@keyframes timeFadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .menu-section .bottom .button-bg {
@@ -273,6 +284,22 @@ body {
 
 .menu-section .bottom .button-container .right button {
 	left: 10%;
+}
+
+.menu-section .bottom svg {
+	position: absolute;
+	bottom: 0;
+	width: 50%;
+	height: 100%;
+	z-index: -1;
+}
+
+.menu-section .bottom .svg.left {
+	left: 0;
+}
+
+.menu-section .bottom .svg.right {
+	right: 0;
 }
 
 @media (orientation: portrait) {
@@ -333,6 +360,10 @@ body {
 	
 	.menu-section .bottom {
 		height: 20%;
+	}
+	
+	.menu-section .bottom .time {
+		display: none;
 	}
 
 	.menu-section .bottom .button-bg {

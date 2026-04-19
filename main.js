@@ -97,3 +97,18 @@ document.addEventListener('mouseenter', e => {
 document.addEventListener('mouseleave', e => {
 	cursor.style.display = 'none';
 });
+
+// Date and Time //
+
+function updateTime() {
+	const timeElement = document.querySelector('.menu-section .bottom .time');
+	const now = new Date();
+	const hours = String(now.getHours()).padStart(2, '0');
+	const minutes = String(now.getMinutes()).padStart(2, '0');
+	timeElement.textContent = `${hours}:${minutes}`;
+}
+
+updateTime();
+document.querySelector('.menu-section .bottom .time').style.animation = 'timeFadeIn 1s ease-in-out forwards';
+
+setInterval(updateTime, 1000);
