@@ -325,20 +325,21 @@ body {
 }
 
 .content-section {
+	padding-top: 20px;
 	background: repeating-linear-gradient(to bottom,
 			#dcdfe6,
 			#cbcfd7 2px);
 	font-size: 12px;
 }
 
-.content-section .dev-languages-carousel {
-	margin: 0 auto;
+.dev-languages-carousel {
+	margin: 20px auto;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
 }
 
-.content-section .dev-languages-carousel .track {
+.dev-languages-carousel .track {
 	will-change: transform;
 	transform: translateZ(0);
 	display: flex;
@@ -346,9 +347,105 @@ body {
 	animation: carouselScroll 10s linear infinite;
 }
 
-.content-section .dev-languages-carousel .track i {
-	font-size: 100px;
+.dev-languages-carousel .track i {
+	font-size: 6vw;
 	margin-right: 30px;
+}
+
+.about-me {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px;
+	padding-top: 25px;
+	border-radius: 20px;
+	background-image: linear-gradient(to bottom, #e4e4e4, #e4e4e4c2);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-me::before {
+	content: "";
+	position: absolute;
+	inset: 10px;
+	border-radius: 12px;
+	box-shadow: 0px 0px 2px 2px #474946, inset 0px 0px 2px 2px #474946;
+	pointer-events: none;
+}
+
+.about-me .title {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 35px;
+	font-weight: 800;
+	margin: 10px 0;
+	color: #474946;
+}
+
+.about-me .subtitle {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	font-style: italic;
+	margin: 10px 0;
+	color: #474946;
+}
+
+.about-me .description {
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	margin-bottom: 10px;
+	color: #1a1a1a;
+}
+
+.about-me hr {
+	margin: 20px auto;
+	width: 75%;
+	border: none;
+	border-top: 1px solid #474946;
+}
+
+.about-me .content-boxes {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.about-me .content-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2%;
+	margin: 0 auto;
+	width: 95%;
+}
+
+.about-me .content-box .text {
+	display: inline-block;
+	width: 60%;
+}
+
+.about-me .content-box .image {
+	display: inline-block;
+	width: 35%;
+}
+
+.about-me .content-box .text .title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	font-weight: 700;
+	color: #474946;
+	margin-bottom: 10px;
+}
+
+.about-me .content-box .text .description {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #1a1a1a;
+}
+
+.about-me .content-box .image img {
+	border-radius: 15px;
 }
 
 @keyframes carouselScroll {
@@ -432,5 +529,9 @@ body {
 		width: 20%;
 		height: 62%;
 		min-width: 100px;
+	}
+
+	.content-section .dev-languages-carousel .track i {
+		font-size: 6vh;
 	}
 }

@@ -215,4 +215,6 @@ setInterval(updateTime, 1000);
 
 const devCarouselTrack = document.querySelector('.dev-languages-carousel .track');
 
-devCarouselTrack.innerHTML += devCarouselTrack.innerHTML; // Duplicate icons for seamless scrolling
+for (let i = 0; i < Math.round(window.innerWidth / 1000); i++) {
+	devCarouselTrack.innerHTML += devCarouselTrack.innerHTML; // Duplicate content for seamless scrolling
+}
