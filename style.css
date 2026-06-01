@@ -492,6 +492,19 @@ body {
 	height: 100%;
 }
 
+.links {
+	text-align: center;
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+.links a {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #098baf;
+}
+
+/* Responsive Styles */
+
 @media (orientation: portrait) {
 	.menu-section .top {
 		height: 80%;
