@@ -272,7 +272,8 @@ body {
 	transform: translate(0%, -50%);
 	width: 14%;
 	height: 72%;
-	background-color: #42bada;
+	background-color: #d4d3da;
+	border: 6px solid #c0c1c7b0;
 	opacity: 0.5;
 	min-width: 175px;
 }
@@ -289,23 +290,23 @@ body {
 	border-bottom-left-radius: 45%;
 }
 
-.menu-section .bottom .button-container button {
+.menu-section .bottom .button-container .svg-container {
 	position: absolute;
 	top: 5%;
-	height: 80%;
+	height: 85%;
 	aspect-ratio: 1 / 1;
-	border: none;
-	background-color: green;
-	cursor: pointer;
-	border-radius: 50%;
 }
 
-.menu-section .bottom .button-container .left button {
-	right: 10%;
+.menu-section .bottom .button-container .left .svg-container {
+	right: 8%;
 }
 
-.menu-section .bottom .button-container .right button {
-	left: 10%;
+.menu-section .bottom .button-container .right .svg-container {
+	left: 8%;
+}
+
+.menu-section .bottom .button-container .svg-container svg {
+	width: 100%;
 }
 
 .menu-section .bottom svg {

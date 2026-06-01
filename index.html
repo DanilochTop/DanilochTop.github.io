@@ -37,11 +37,79 @@
 
 			<div class="button-container">
 				<div class="button-bg left">
-					<button></button>
+					<div class="svg-container">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+							<defs>
+								<radialGradient id="dome" cx="38%" cy="30%" r="68%">
+									<stop offset="0%" stop-color="#f6f6f6" />
+									<stop offset="40%" stop-color="#e0e0e0" />
+									<stop offset="100%" stop-color="#b8b8b8" />
+								</radialGradient>
+								<radialGradient id="sheen" cx="35%" cy="25%" r="38%">
+									<stop offset="0%" stop-color="#ffffff" stop-opacity="0.75" />
+									<stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+								</radialGradient>
+								<radialGradient id="innerShadow" cx="65%" cy="72%" r="52%">
+									<stop offset="0%" stop-color="#888" stop-opacity="0.38" />
+									<stop offset="100%" stop-color="#888" stop-opacity="0" />
+								</radialGradient>
+								<clipPath id="clip">
+									<circle cx="150" cy="150" r="130" />
+								</clipPath>
+							</defs>
+					
+							<!-- Blue ring -->
+							<circle cx="150" cy="150" r="143" fill="none" stroke="#00c4ee" stroke-width="20" stroke-opacity="0.15" />
+							<circle cx="150" cy="150" r="140" fill="none" stroke="#10c4ef" stroke-width="12" />
+					
+							<!-- Dome fills the button -->
+							<circle cx="150" cy="150" r="130" fill="url(#dome)" />
+							<circle cx="150" cy="150" r="130" fill="url(#innerShadow)" clip-path="url(#clip)" />
+							<ellipse cx="118" cy="110" rx="60" ry="46" fill="url(#sheen)" clip-path="url(#clip)" />
+					
+							<!-- Wii text -->
+							<text x="150" y="172" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="62"
+								font-weight="700" text-anchor="middle" fill="#b0b0b0" letter-spacing="-1">Wii</text>
+						</svg>
+					</div>
 				</div>
 
 				<div class="button-bg right">
-					<button></button>
+					<div class="svg-container">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+							<defs>
+								<radialGradient id="dome" cx="38%" cy="30%" r="68%">
+									<stop offset="0%" stop-color="#f6f6f6" />
+									<stop offset="40%" stop-color="#e0e0e0" />
+									<stop offset="100%" stop-color="#b8b8b8" />
+								</radialGradient>
+								<radialGradient id="sheen" cx="35%" cy="25%" r="38%">
+									<stop offset="0%" stop-color="#ffffff" stop-opacity="0.75" />
+									<stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+								</radialGradient>
+								<radialGradient id="innerShadow" cx="65%" cy="72%" r="52%">
+									<stop offset="0%" stop-color="#888" stop-opacity="0.38" />
+									<stop offset="100%" stop-color="#888" stop-opacity="0" />
+								</radialGradient>
+								<clipPath id="clip">
+									<circle cx="150" cy="150" r="130" />
+								</clipPath>
+							</defs>
+					
+							<!-- Blue ring -->
+							<circle cx="150" cy="150" r="143" fill="none" stroke="#00c4ee" stroke-width="20" stroke-opacity="0.15" />
+							<circle cx="150" cy="150" r="140" fill="none" stroke="#10c4ef" stroke-width="12" />
+					
+							<!-- Dome fills the button -->
+							<circle cx="150" cy="150" r="130" fill="url(#dome)" />
+							<circle cx="150" cy="150" r="130" fill="url(#innerShadow)" clip-path="url(#clip)" />
+							<ellipse cx="118" cy="110" rx="60" ry="46" fill="url(#sheen)" clip-path="url(#clip)" />
+					
+							<!-- Wii text -->
+							<text x="150" y="172" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="62"
+								font-weight="700" text-anchor="middle" fill="#b0b0b0" letter-spacing="-1">Wii</text>
+						</svg>
+					</div>
 				</div>
 			</div>
 
