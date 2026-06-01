@@ -1,0 +1,46 @@
+{
+	"title": "Daniloch",
+	"description": "Appassionato di tecnologia e sviluppatore di giochi",
+	"aboutMe": {
+		"title": "Chi Sono",
+		"description": "Ciao, sono Daniloch! Sono un appassionato di tecnologia e sviluppatore di giochi con la passione per creare esperienze immersive. Con un background in programmazione e design, mi piace dare vita alle idee attraverso il codice e la creatività. Che si tratti di sviluppare giochi, esplorare nuove tecnologie o condividere le mie conoscenze, sono sempre desideroso di imparare e crescere nel mondo della tecnologia."
+	},
+	"skills": {
+		"title": "Le Mie Competenze",
+		"frontend": {
+			"title": "Sviluppo Frontend",
+			"description": "Ho esperienza nello sviluppo frontend, creando interfacce responsive e facili da usare con HTML, CSS e JavaScript. Mi piace realizzare design visivamente accattivanti e garantire un'esperienza utente fluida su diversi dispositivi e browser."
+		},
+		"backend": {
+			"title": "Sviluppo Backend",
+			"description": "Ho esperienza nello sviluppo backend, lavorando con tecnologie server-side per creare applicazioni robuste e scalabili. Sono competente in linguaggi come Node.js e Python e mi piace progettare API e implementare la logica del server per supportare le funzionalità del frontend."
+		},
+		"database": {
+			"title": "Gestione dei Database",
+			"description": "Ho esperienza nella gestione dei database, lavorando con database relazionali come MongoDB e MySQL. Sono abile nella progettazione di schemi, nell'ottimizzazione delle query e nel garantire l'integrità dei dati per supportare le esigenze di applicazioni e servizi."
+		},
+		"unity": {
+			"title": "Sviluppo con Unity Engine",
+			"description": "Ho esperienza nello sviluppo con Unity Engine, creando giochi interattivi e immersivi. Sono competente nella programmazione C# e ho una solida comprensione delle meccaniche di gioco, della fisica e delle tecniche di ottimizzazione per offrire esperienze di gioco coinvolgenti."
+		},
+		"roblox": {
+			"title": "Sviluppo Roblox",
+			"description": "Ho esperienza nello sviluppo Roblox, creando giochi ed esperienze sulla piattaforma Roblox. Sono competente nella programmazione Lua e ho una profonda conoscenza dell'ecosistema Roblox, il che mi permette di progettare e sviluppare giochi coinvolgenti per la community di Roblox."
+		},
+		"muchMore": "E molto altro..."
+	},
+	"projects": {
+		"title": "I Miei Progetti",
+		"regama": {
+			"title": "ReGaMa",
+			"topDescription": "Regama è un progetto di revival ispirato alla versione 2015 di KoGaMa, focalizzato nel ricreare e modernizzare l'esperienza originale mantenendone lo stile di gioco classico. Il progetto include un server multigiocatore personalizzato, editing dei blocchi in tempo reale, mondi generati dagli utenti e sistemi ispirati all'eredità ricostruiti con tecnologie moderne come Unity, C#, WebSockets e MongoDB.",
+			"middleDescription": "Ecco alcuni video di utenti che giocano e mostrano tutte le funzionalità:",
+			"bottomDescription": "Regama è un'ottima dimostrazione delle mie competenze in sviluppo di giochi, networking multigiocatore, architettura backend, reverse engineering e tool personalizzati. Il progetto ricrea e modernizza la classica esperienza di KoGaMa 2015 usando Unity e C#, con mondi generati dagli utenti, sistemi multigiocatore in tempo reale, meccaniche di costruzione di tipo voxel modificabili e un'infrastruttura server personalizzata."
+		}
+	},
+	"links": {
+		"title": "Link",
+		"website": "Il Mio Sito Web",
+		"github": "Il Mio GitHub"
+	}
+}

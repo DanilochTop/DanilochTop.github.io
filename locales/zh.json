@@ -1,0 +1,46 @@
+{
+	"title": "Daniloch",
+	"description": "技术爱好者和游戏开发者",
+	"aboutMe": {
+		"title": "关于我",
+		"description": "你好，我是Daniloch！我是一名热爱技术和游戏开发的爱好者，喜欢打造沉浸式体验。凭借编程和设计背景，我喜欢用代码和创意让想法落地。不论是开发游戏、探索新技术还是分享知识，我都渴望在科技世界中不断学习和成长。"
+	},
+	"skills": {
+		"title": "我的技能",
+		"frontend": {
+			"title": "前端开发",
+			"description": "我有前端开发经验，使用HTML、CSS和JavaScript创建响应式、易用的界面。我喜欢打造视觉吸引力强的设计，并确保在不同设备和浏览器上都有流畅的用户体验。"
+		},
+		"backend": {
+			"title": "后端开发",
+			"description": "我有后端开发经验，使用服务器端技术构建健壮且可扩展的应用。我熟练掌握Node.js和Python等语言，喜欢设计API并实现服务器逻辑来支撑前端功能。"
+		},
+		"database": {
+			"title": "数据库管理",
+			"description": "我有数据库管理经验，使用MongoDB和MySQL等关系型数据库。我擅长设计数据库架构、优化查询并确保数据完整性，以满足应用和服务的需求。"
+		},
+		"unity": {
+			"title": "Unity引擎开发",
+			"description": "我有Unity引擎开发经验，能够创建互动性强且沉浸感十足的游戏。我熟练掌握C#编程，对游戏机制、物理和优化技术有深入理解，能够带来引人入胜的游戏体验。"
+		},
+		"roblox": {
+			"title": "Roblox开发",
+			"description": "我有Roblox开发经验，在Roblox平台上创建游戏和体验。我精通Lua编程，并深入了解Roblox生态系统，从而能够为Roblox社区设计并开发有趣的游戏。"
+		},
+		"muchMore": "还有更多..."
+	},
+	"projects": {
+		"title": "我的项目",
+		"regama": {
+			"title": "ReGaMa",
+			"topDescription": "Regama是一个受2015版KoGaMa启发的复兴项目，旨在重现并现代化原有体验，同时保留其经典的游戏风格。该项目包含自定义多人服务器、实时方块编辑、用户生成的世界，以及使用Unity、C#、WebSockets和MongoDB等现代技术重建的经典风格系统。",
+			"middleDescription": "以下是一些玩家游玩并展示全部功能的视频：",
+			"bottomDescription": "Regama很好地展示了我在游戏开发、多人网络、后端架构、逆向工程和自定义工具方面的能力。该项目使用Unity和C#重现并现代化2015版KoGaMa的经典体验，包含用户生成的世界、实时多人系统、可编辑的体素式建造机制以及定制的服务器基础设施。"
+		}
+	},
+	"links": {
+		"title": "链接",
+		"website": "我的网站",
+		"github": "我的GitHub"
+	}
+}
