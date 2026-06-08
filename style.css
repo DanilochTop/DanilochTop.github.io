@@ -580,6 +580,18 @@ body {
 		min-width: 100px;
 	}
 
+	.about-me .content-box {
+		display: block;
+	}
+
+	.about-me .content-box .text {
+		width: 100%;
+	}
+
+	.about-me .content-box .image {
+		width: 100%;
+	}
+
 	.content-section .dev-languages-carousel .track i {
 		font-size: 6vh;
 	}
